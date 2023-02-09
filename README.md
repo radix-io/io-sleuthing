@@ -6,7 +6,16 @@ chance to go into a little more detail at the ATPESC training program's "Data
 and I/O" day.   In this course, however, we are going to have a chance to
 really dig into I/O performance to understand why we see the performance we do.
 
+## Venue (Where/When)
+
+We are running the workshop at Argonne National Laboratory.  Building 241, room D-172.
+
+Monday 20 March from Noon to 3:15 pm
+
 ## Outline
+
+Noon to 3:30 pm
+(All times US Central)
 
 - Introduction:
   - overview of the day
@@ -16,6 +25,8 @@ really dig into I/O performance to understand why we see the performance we do.
 - Simulation I/O
   - Describe a non-trivial I/O kernel
   - Execute on exemplar machine
+- I/O libraries
+- Break
 - Machine Learning I/O
   - Describe a non-trivial I/O kernel
   - Execute on exemplar machine
@@ -24,7 +35,6 @@ really dig into I/O performance to understand why we see the performance we do.
   - single node benchmarking
   - parallel benchmakring
   - benchmarking pitfalls
-- I/O libraries
 - Analysis
   - Darshan DXT data
   - py-darshan
@@ -36,11 +46,6 @@ really dig into I/O performance to understand why we see the performance we do.
 - The Darshan I/O characterization tool will give us initial reports with
   options to drill into access patterns and create our own querries.
 
-
-## Venue
-
-We are running the workshop at Argonne National Laboratory.  Specific room
-still to be determined based on pre-registration numbers.
 
 ## Materials
 
