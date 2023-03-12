@@ -1,0 +1,347 @@
+IOR-4.0.0rc1: MPI Coordinated Test of Parallel I/O
+Began               : Fri Mar 10 22:27:34 2023
+Command line        : /home/robl/soft/cray/ior-4.0.0rc1/bin/ior --mpiio.showHints -a MPIIO -F -e -C -s 8 -i 5 -t 1MiB -b 64MiB -o /grand/radix-io/scratch/robl/ior/ior-fpp-nostripe.out
+Machine             : Linux x3001c0s13b0n0
+TestID              : 0
+StartTime           : Fri Mar 10 22:27:34 2023
+Path                : /grand/radix-io/scratch/robl/ior/ior-fpp-nostripe.out.00000000
+FS                  : 93023.3 TiB   Used FS: 51.7%   Inodes: 93433.6 Mi   Used Inodes: 0.7%
+
+Options: 
+api                 : MPIIO
+apiVersion          : (3.1)
+test filename       : /grand/radix-io/scratch/robl/ior/ior-fpp-nostripe.out
+access              : file-per-process
+type                : independent
+segments            : 8
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 32
+tasks               : 128
+clients per node    : 4
+repetitions         : 5
+xfersize            : 1 MiB
+blocksize           : 64 MiB
+aggregate filesize  : 64 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+
+hints passed to MPI_File_open() {
+	striping_factor = 1
+}
+
+hints returned from opened file {
+	romio_cb_pfr = disable
+	romio_cb_fr_types = aar
+	cb_align = 2
+	cb_buffer_size = 16777216
+	romio_cb_fr_alignment = 1
+	romio_cb_ds_threshold = 0
+	romio_cb_alltoall = automatic
+	romio_cb_read = automatic
+	romio_cb_write = automatic
+	romio_no_indep_rw = false
+	romio_ds_write = automatic
+	ind_wr_buffer_size = 524288
+	romio_ds_read = disable
+	ind_rd_buffer_size = 4194304
+	direct_io = false
+	striping_factor = 1
+	striping_unit = 1048576
+	romio_lustre_start_iodevice = -1
+	aggregator_placement_stride = -1
+	abort_on_rw_error = disable
+	cb_config_list = *:*
+	cb_nodes = 1
+	romio_filesystem_type = CRAY ADIO:
+}
+write     45094      45228      0.004968    65536      1024.00    0.042452   1.45       1.15       1.45       0   
+
+hints passed to MPI_File_open() {
+	striping_factor = 1
+}
+
+hints returned from opened file {
+	romio_cb_pfr = disable
+	romio_cb_fr_types = aar
+	cb_align = 2
+	cb_buffer_size = 16777216
+	romio_cb_fr_alignment = 1
+	romio_cb_ds_threshold = 0
+	romio_cb_alltoall = automatic
+	romio_cb_read = automatic
+	romio_cb_write = automatic
+	romio_no_indep_rw = false
+	romio_ds_write = automatic
+	ind_wr_buffer_size = 524288
+	romio_ds_read = disable
+	ind_rd_buffer_size = 4194304
+	direct_io = false
+	striping_factor = 1
+	striping_unit = 1048576
+	romio_lustre_start_iodevice = -1
+	aggregator_placement_stride = -1
+	abort_on_rw_error = disable
+	cb_config_list = *:*
+	cb_nodes = 1
+	romio_filesystem_type = CRAY ADIO:
+}
+read      40129      40182      0.006352    65536      1024.00    0.023041   1.63       1.35       1.63       0   
+
+hints passed to MPI_File_open() {
+	striping_factor = 1
+}
+
+hints returned from opened file {
+	romio_cb_pfr = disable
+	romio_cb_fr_types = aar
+	cb_align = 2
+	cb_buffer_size = 16777216
+	romio_cb_fr_alignment = 1
+	romio_cb_ds_threshold = 0
+	romio_cb_alltoall = automatic
+	romio_cb_read = automatic
+	romio_cb_write = automatic
+	romio_no_indep_rw = false
+	romio_ds_write = automatic
+	ind_wr_buffer_size = 524288
+	romio_ds_read = disable
+	ind_rd_buffer_size = 4194304
+	direct_io = false
+	striping_factor = 1
+	striping_unit = 1048576
+	romio_lustre_start_iodevice = -1
+	aggregator_placement_stride = -1
+	abort_on_rw_error = disable
+	cb_config_list = *:*
+	cb_nodes = 1
+	romio_filesystem_type = CRAY ADIO:
+}
+write     130854     134033     0.004843    65536      1024.00    0.025312   0.488955   0.186067   0.500832   1   
+
+hints passed to MPI_File_open() {
+	striping_factor = 1
+}
+
+hints returned from opened file {
+	romio_cb_pfr = disable
+	romio_cb_fr_types = aar
+	cb_align = 2
+	cb_buffer_size = 16777216
+	romio_cb_fr_alignment = 1
+	romio_cb_ds_threshold = 0
+	romio_cb_alltoall = automatic
+	romio_cb_read = automatic
+	romio_cb_write = automatic
+	romio_no_indep_rw = false
+	romio_ds_write = automatic
+	ind_wr_buffer_size = 524288
+	romio_ds_read = disable
+	ind_rd_buffer_size = 4194304
+	direct_io = false
+	striping_factor = 1
+	striping_unit = 1048576
+	romio_lustre_start_iodevice = -1
+	aggregator_placement_stride = -1
+	abort_on_rw_error = disable
+	cb_config_list = *:*
+	cb_nodes = 1
+	romio_filesystem_type = CRAY ADIO:
+}
+read      69717      69854      0.011158    65536      1024.00    0.003010   0.938184   0.677981   0.940025   1   
+
+hints passed to MPI_File_open() {
+	striping_factor = 1
+}
+
+hints returned from opened file {
+	romio_cb_pfr = disable
+	romio_cb_fr_types = aar
+	cb_align = 2
+	cb_buffer_size = 16777216
+	romio_cb_fr_alignment = 1
+	romio_cb_ds_threshold = 0
+	romio_cb_alltoall = automatic
+	romio_cb_read = automatic
+	romio_cb_write = automatic
+	romio_no_indep_rw = false
+	romio_ds_write = automatic
+	ind_wr_buffer_size = 524288
+	romio_ds_read = disable
+	ind_rd_buffer_size = 4194304
+	direct_io = false
+	striping_factor = 1
+	striping_unit = 1048576
+	romio_lustre_start_iodevice = -1
+	aggregator_placement_stride = -1
+	abort_on_rw_error = disable
+	cb_config_list = *:*
+	cb_nodes = 1
+	romio_filesystem_type = CRAY ADIO:
+}
+write     172772     176724     0.004788    65536      1024.00    0.026734   0.370837   0.062058   0.379321   2   
+
+hints passed to MPI_File_open() {
+	striping_factor = 1
+}
+
+hints returned from opened file {
+	romio_cb_pfr = disable
+	romio_cb_fr_types = aar
+	cb_align = 2
+	cb_buffer_size = 16777216
+	romio_cb_fr_alignment = 1
+	romio_cb_ds_threshold = 0
+	romio_cb_alltoall = automatic
+	romio_cb_read = automatic
+	romio_cb_write = automatic
+	romio_no_indep_rw = false
+	romio_ds_write = automatic
+	ind_wr_buffer_size = 524288
+	romio_ds_read = disable
+	ind_rd_buffer_size = 4194304
+	direct_io = false
+	striping_factor = 1
+	striping_unit = 1048576
+	romio_lustre_start_iodevice = -1
+	aggregator_placement_stride = -1
+	abort_on_rw_error = disable
+	cb_config_list = *:*
+	cb_nodes = 1
+	romio_filesystem_type = CRAY ADIO:
+}
+read      63658      63771      0.005418    65536      1024.00    0.021573   1.03       0.739451   1.03       2   
+
+hints passed to MPI_File_open() {
+	striping_factor = 1
+}
+
+hints returned from opened file {
+	romio_cb_pfr = disable
+	romio_cb_fr_types = aar
+	cb_align = 2
+	cb_buffer_size = 16777216
+	romio_cb_fr_alignment = 1
+	romio_cb_ds_threshold = 0
+	romio_cb_alltoall = automatic
+	romio_cb_read = automatic
+	romio_cb_write = automatic
+	romio_no_indep_rw = false
+	romio_ds_write = automatic
+	ind_wr_buffer_size = 524288
+	romio_ds_read = disable
+	ind_rd_buffer_size = 4194304
+	direct_io = false
+	striping_factor = 1
+	striping_unit = 1048576
+	romio_lustre_start_iodevice = -1
+	aggregator_placement_stride = -1
+	abort_on_rw_error = disable
+	cb_config_list = *:*
+	cb_nodes = 1
+	romio_filesystem_type = CRAY ADIO:
+}
+write     173970     177904     0.005119    65536      1024.00    0.025281   0.368378   0.067961   0.376708   3   
+
+hints passed to MPI_File_open() {
+	striping_factor = 1
+}
+
+hints returned from opened file {
+	romio_cb_pfr = disable
+	romio_cb_fr_types = aar
+	cb_align = 2
+	cb_buffer_size = 16777216
+	romio_cb_fr_alignment = 1
+	romio_cb_ds_threshold = 0
+	romio_cb_alltoall = automatic
+	romio_cb_read = automatic
+	romio_cb_write = automatic
+	romio_no_indep_rw = false
+	romio_ds_write = automatic
+	ind_wr_buffer_size = 524288
+	romio_ds_read = disable
+	ind_rd_buffer_size = 4194304
+	direct_io = false
+	striping_factor = 1
+	striping_unit = 1048576
+	romio_lustre_start_iodevice = -1
+	aggregator_placement_stride = -1
+	abort_on_rw_error = disable
+	cb_config_list = *:*
+	cb_nodes = 1
+	romio_filesystem_type = CRAY ADIO:
+}
+read      66014      66145      0.010750    65536      1024.00    0.002920   0.990796   0.721585   0.992761   3   
+
+hints passed to MPI_File_open() {
+	striping_factor = 1
+}
+
+hints returned from opened file {
+	romio_cb_pfr = disable
+	romio_cb_fr_types = aar
+	cb_align = 2
+	cb_buffer_size = 16777216
+	romio_cb_fr_alignment = 1
+	romio_cb_ds_threshold = 0
+	romio_cb_alltoall = automatic
+	romio_cb_read = automatic
+	romio_cb_write = automatic
+	romio_no_indep_rw = false
+	romio_ds_write = automatic
+	ind_wr_buffer_size = 524288
+	romio_ds_read = disable
+	ind_rd_buffer_size = 4194304
+	direct_io = false
+	striping_factor = 1
+	striping_unit = 1048576
+	romio_lustre_start_iodevice = -1
+	aggregator_placement_stride = -1
+	abort_on_rw_error = disable
+	cb_config_list = *:*
+	cb_nodes = 1
+	romio_filesystem_type = CRAY ADIO:
+}
+write     94603      95666      0.004705    65536      1024.00    0.032122   0.685050   0.382185   0.692749   4   
+
+hints passed to MPI_File_open() {
+	striping_factor = 1
+}
+
+hints returned from opened file {
+	romio_cb_pfr = disable
+	romio_cb_fr_types = aar
+	cb_align = 2
+	cb_buffer_size = 16777216
+	romio_cb_fr_alignment = 1
+	romio_cb_ds_threshold = 0
+	romio_cb_alltoall = automatic
+	romio_cb_read = automatic
+	romio_cb_write = automatic
+	romio_no_indep_rw = false
+	romio_ds_write = automatic
+	ind_wr_buffer_size = 524288
+	romio_ds_read = disable
+	ind_rd_buffer_size = 4194304
+	direct_io = false
+	striping_factor = 1
+	striping_unit = 1048576
+	romio_lustre_start_iodevice = -1
+	aggregator_placement_stride = -1
+	abort_on_rw_error = disable
+	cb_config_list = *:*
+	cb_nodes = 1
+	romio_filesystem_type = CRAY ADIO:
+}
+read      64369      64498      0.006480    65536      1024.00    0.002996   1.02       0.707260   1.02       4   
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write      173970.28   45093.96  123458.64   49013.48  173970.28   45093.96  123458.64   49013.48    0.68059         NA            NA     0    128   4    5   1     1        1         0    0      8 67108864  1048576   65536.0 MPIIO      0
+read        69717.31   40129.13   60777.44   10534.61   69717.31   40129.13   60777.44   10534.61    1.12271         NA            NA     0    128   4    5   1     1        1         0    0      8 67108864  1048576   65536.0 MPIIO      0
+Finished            : Fri Mar 10 22:27:44 2023
