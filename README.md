@@ -1,10 +1,18 @@
 # I/O sleuthing:
 
-Thanks for checking out our course on I/O performance.  We've given a
-high-level survey of parallel I/O at SC for many years.  We've also had a
-chance to go into a little more detail at the ATPESC training program's "Data
-and I/O" day.   In this course, however, we are going to have a chance to
-really dig into I/O performance to understand why we see the performance we do.
+Tuning an application's I/O and tuning for compute or memory share similar
+characteristics, but I/O tuning introduces some unique challenges.  We will examine a
+typical high performance computing (HPC) system and its storage.  Through
+benchmarks, I/O kernels, and characterization tools we will build up the kind
+of mental model of a system's I/O performance that can help us find solutions
+to I/O performance problems when we encounter them.
+
+We've given a high-level survey of parallel I/O at SC for many years.  We've
+also had a chance to go into a little more detail at the ATPESC training
+program's "Data and I/O" day.   In this half day workshop, however, we are
+going to have a chance to go into more detail about tuning parameters and
+workloads.  We will also cover some of the tools and resources we can use to
+understand why we see the performance we do.
 
 ## Venue (Where/When)
 
@@ -33,7 +41,7 @@ Noon to 3:30 pm
 - Benchmarking
   - establishing the ground truths
   - single node benchmarking
-  - parallel benchmakring
+  - parallel benchmarking
   - benchmarking pitfalls
 - Analysis
   - Darshan DXT data
@@ -42,9 +50,8 @@ Noon to 3:30 pm
 ## Tools
 
 - We can generate and observe lots of access patterns with the IOR benchmark
-- 'fio' is a useful tool for single-node tuning
 - The Darshan I/O characterization tool will give us initial reports with
-  options to drill into access patterns and create our own querries.
+  options to drill into access patterns and create our own queries.
 
 
 ## Materials
