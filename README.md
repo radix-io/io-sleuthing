@@ -47,11 +47,21 @@ Noon to 3:30 pm
   - Darshan DXT data
   - py-darshan
 
-## Tools
+## Tools and Libraries
 
-- We can generate and observe lots of access patterns with the IOR benchmark
-- The Darshan I/O characterization tool will give us initial reports with
+- [IOR](https://github.com/hpc/ior): We can generate and observe lots of access
+  patterns with the IOR benchmark
+- [Darshan](https://www.mcs.anl.gov/research/projects/darshan/): The Darshan
+  I/O characterization tool will give us initial reports with
   options to drill into access patterns and create our own queries.
+- [ROMIO](https://wordpress.cels.anl.gov/romio/): We talk a lot about Cray
+  MPICH tuning parameters.  Cray has done a lot of work on top of ROMIO.  Some
+  of the options discussed won't apply to non-Cray systems, but a lot of the
+  important ideas like data sieving and two-phase collective buffering are
+  found in ROMIO and in turn in MPICH or OpenMPI.  do.
+- [Parallel-NetCDF](https://github.com/Parallel-NetCDF/PnetCDF) and
+  [HDF5](https://www.hdfgroup.org/solutions/hdf5/):  High level I/O libraries
+  targeting applications.
 
 
 ## Materials
