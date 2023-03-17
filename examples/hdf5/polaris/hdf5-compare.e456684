@@ -1,0 +1,843 @@
+
+Currently Loaded Modules:
+  1) craype-x86-rome         12) PrgEnv-gnu/8.3.3
+  2) craype-network-ofi      13) cudatoolkit-standalone/11.6.2
+  3) perftools-base/22.05.0  14) e4s/22.08/PrgEnv-gnu
+  4) craype-accel-nvidia80   15) darshan-runtime/3.4.0
+  5) cray-python/3.9.12.1    16) libfabric/1.11.0.4.125
+  6) craype/2.7.15           17) gcc/11.2.0
+  7) cray-dsmml/0.2.2        18) cray-mpich/8.1.16
+  8) cray-pmi/6.1.2          19) cray-parallel-netcdf/1.12.2.3
+  9) cray-pmi-lib/6.0.17     20) cray-hdf5-parallel/1.12.1.3
+ 10) cray-pals/1.1.7         21) darshan-util/3.4.0
+ 11) cray-libpals/1.1.7
+
+ 
+
++--------------------------------------------------------+
+|   pfl comp[0]= 160 x      1M      0M -     -1  w=   561M / 73600007 (83128.735 + 0.000)  r=     0M /     0 (0.000 + 0.000)
+|   pfl comp total w=   561M / 73600007 (83128.735 + 0.000)  r=     0M /     0 (0.000 + 0.000)
++--------------------------------------------------------+
+| MPIIO write access patterns for /grand/radix-io/scratch/robl/hdf5/output-default.h5
+|   ranks in communicator   = 320
+|   independent writes      = 73600007
+|   collective writes       = 0
+|   independent writers     = 320
+|   aggregators             = 160
+|   stripe count            = 160
+|   stripe size             = 1048576
+|   system writes           = 73600007
+|   stripe sized writes     = 0
+|   total bytes for writes  = 588801496 = 561 MiB
+|   ave system write size   = 8
+|   read-modify-write count = 0
+|   read-modify-write bytes = 0
+|   number of write gaps    = 73420727
+|   ave write gap size      = 2586
++--------------------------------------------------------+
++--------------------------------------------------------------------------+
+| MPIIO write by phases, all ranks, for /grand/radix-io/scratch/robl/hdf5/output-default.h5
+|   number of ranks writing        =   320
+|   number of ranks not writing    =     0
+|                                          min         max         ave
+|                                    ----------  ----------  ----------
+|   open/trunc  time               =       0.12        0.12        0.12
+|   close sys time                 =       0.00        0.00        0.00
+|   close fsync time               =       0.00        0.00        0.00
+|   close group-unlock time        =       0.00        0.00        0.00
+|   close other + wait time        =       0.00        0.00        0.00
+|   file write        time         =       4.57      249.88      211.28
+|                                                                      
+|   time scale: 1 = 2**10    clock ticks    min         max         ave 
+|                                    ----------  ----------  ---------- ---
+|   total                          =                          709581354       
+|
+|   imbalance                      =          0           0           0  0%
+|   open/trunc                     =     389022      389120      389097  0%
+|   close sys                      =        147        1302         615  0%
+|   close fsync                    =          0           0           0  0%
+|   close group-unlock             =          0           0           0  0%
+|   close other + wait             =          0          23           1  0%
+|   local compute                  =      65757      194643      142547  0%
+|   file write                     =   15338114   838607784   709049091 99%
+|   other                          =          0           0           0  0%
+|                                                                     
+|   raw write BW (MiB/s)           =                              2.658
+|   net write BW (MiB/s)           =                              2.656
++--------------------------------------------------------------------------+
+||
+||   Slow writer file write  Time =  838607784 Rank = 306
+||   Quick writer file write Time =   15338114 Rank = 101
+||   Slow group unlock writer  Time =          0 Rank = 0
+||   Quick group unlock writer Time =          0 Rank = 0
++--------------------------------------------------------+
+|   pfl comp[0]=  1 x      1M      0M -     -1  w=     0M /     8 (0.001 + 0.000)  r=     0M /     0 (0.000 + 0.000)
+|   pfl comp total w=     0M /     8 (0.001 + 0.000)  r=     0M /     0 (0.000 + 0.000)
++--------------------------------------------------------+
+| MPIIO write access patterns for /home/robl/src/io-sleuthing/examples/hdf5/polaris/robl_h5par-comparison_id16426-16426_3-17-50998-358755268642537680.darshan_partial
+|   ranks in communicator   = 320
+|   independent writes      = 2
+|   collective writes       = 6
+|   independent writers     = 1
+|   aggregators             = 4
+|   stripe count            = 1
+|   stripe size             = 1048576
+|   system writes           = 8
+|   stripe sized writes     = 0
+|   aggregators active      = 1920,0,0,0 (1, <= 2, > 2, 4)
+|   total bytes for writes  = 163487
+|   ave system write size   = 20435
+|   read-modify-write count = 0
+|   read-modify-write bytes = 0
+|   number of write gaps    = 0
+|   ave write gap size      = NA
++--------------------------------------------------------+
++--------------------------------------------------------------------------+
+| MPIIO write by phases, all ranks, for /home/robl/src/io-sleuthing/examples/hdf5/polaris/robl_h5par-comparison_id16426-16426_3-17-50998-358755268642537680.darshan_partial
+|   number of ranks writing        =     1
+|   number of ranks not writing    =   319
+|                                          min         max         ave
+|                                    ----------  ----------  ----------
+|   open/trunc  time               =       0.00        0.00        0.00
+|   close sys time                 =       0.00        0.00        0.00
+|   close fsync time               =       0.00        0.00        0.00
+|   close group-unlock time        =       0.00        0.00        0.00
+|   close other + wait time        =       0.00        0.00        0.00
+|                                                                      
+|   time scale: 1 = 2**1     clock ticks    min         max         ave 
+|                                    ----------  ----------  ---------- ---
+|   total                          =                          620833049       
+|
+|   imbalance                      =     111678      889602      634774  0%
+|   open/trunc                     =    2983834     2996294     2990201  0%
+|   close sys                      =         14      320124        3486  0%
+|   close fsync                    =          0           0           0  0%
+|   close group-unlock             =          0           0           0  0%
+|   close other + wait             =        126         658         394  0%
+|   local compute                  =     196994   612548986    71535792 11%
+|   wait for coll                  =     439068    48339746    45063703  7%
+|   collective                     =     627438      887530      759680  0%
+|   exchange/write                 =       7630       17570        8755  0%
+|   data send (*)                  =       7420     3002622      196637  0%
+|   sieve read                     =          0       22862         158  0%
+|   file write                     =          0      926744      926744  0%
+|   other                          =     126588   568219386   499636568 80%
+|                                                                     
+|   data send BW (MiB/s)           =                           1356.263
+|   raw write BW (MiB/s)           =                            289.080
+|   net write BW (MiB/s)           =                              0.432
+|
+| (*) send and write overlap when number ranks != number of writers    
++--------------------------------------------------------------------------+
+|| Level 2 details wait for coll            min         max         ave 
+||                                   ----------  ----------  ---------- ---
+||   wait for coll.1               =      77462      529186      386860  0%
+||   wait for coll.2               =      85400      135870      121895  0%
+||   wait for coll.3               =      58282      468636      344482  0%
+||   wait for coll.4               =      61754    46839436    43910028  7%
+||   wait for coll.5               =      83538      114184       98547  0%
+||   wait for coll.6               =      72632      252434      201888  0%
+||
+||   Late arriver among all ranks waitforcoll.1 Time =      77462 Rank = 192
+||   Late arriver among all ranks waitforcoll.2 Time =      85400 Rank = 114
+||   Late arriver among all ranks waitforcoll.3 Time =      58282 Rank = 0
+||   Late arriver among all ranks waitforcoll.4 Time =      61754 Rank = 0
+||   Late arriver among all ranks waitforcoll.5 Time =      83538 Rank = 176
+||   Late arriver among all ranks waitforcoll.6 Time =      72632 Rank = 160
++--------------------------------------------------------------------------+
+| MPIIO write by phases, writers only, for /home/robl/src/io-sleuthing/examples/hdf5/polaris/robl_h5par-comparison_id16426-16426_3-17-50998-358755268642537680.darshan_partial
+|                                          min         max         ave
+|                                    ----------  ----------  ----------
+|   file write        time         =       0.00        0.00        0.00
+|                                                                      
+|   time scale: 1 = 2**1     clock ticks    min         max         ave
+|                                    ----------  ----------  ---------- ---
+|   total                          =                          621870732       
+|
+|   imbalance                      =     887712      887712      887712  0%
+|   local compute                  =  612548986   612548986   612548986 98%
+|   wait for coll                  =     667786      667786      667786  0%
+|   collective                     =     693812      693812      693812  0%
+|   exchange/write                 =      17570       17570       17570  0%
+|   data send                      =    3002622     3002622     3002622  0%
+|   sieve read                     =       4550        4550        4550  0%
+|   file write                     =     926744      926744      926744  0%
+|   other                          =     126588      126588      126588  0%
+|                                                                     
+|   data send BW (MiB/s)           =                              0.892
+|   raw write BW (MiB/s)           =                            289.080
+|   net write BW (MiB/s)           =                              0.431
++--------------------------------------------------------------------------+
+|| Level 2 details wait for coll            min         max         ave 
+||                                   ----------  ----------  ---------- ---
+||   wait for coll.1               =      84686       84686       84686  0%
+||   wait for coll.2               =     128800      128800      128800  0%
+||   wait for coll.3               =      58282       58282       58282  0%
+||   wait for coll.4               =      61754       61754       61754  0%
+||   wait for coll.5               =     104300      104300      104300  0%
+||   wait for coll.6               =     229964      229964      229964  0%
+||
+||   Late arriver among writers waitforcoll.1 Time =      84686 Rank = 0
+||   Late arriver among writers waitforcoll.2 Time =     128800 Rank = 0
+||   Late arriver among writers waitforcoll.3 Time =      58282 Rank = 0
+||   Late arriver among writers waitforcoll.4 Time =      61754 Rank = 0
+||   Late arriver among writers waitforcoll.5 Time =     104300 Rank = 0
+||   Late arriver among writers waitforcoll.6 Time =     229964 Rank = 0
+||
+||   Slow writer file write  Time =     926744 Rank = 0
+||   Quick writer file write Time =     926744 Rank = 0
+||   Slow group unlock writer  Time =          0 Rank = 0
+||   Quick group unlock writer Time =          0 Rank = 0
++--------------------------------------------------------------------------+
++--------------------------------------------------------+
+|   pfl comp[0]= 160 x      1M      0M -     -1  w=     0M /     0 (0.000 + 0.000)  r=   562M / 73601284 (44719.095 + 0.000)
+|   pfl comp total w=     0M /     0 (0.000 + 0.000)  r=   562M / 73601284 (44719.095 + 0.000)
++--------------------------------------------------------+
+| MPIIO read access patterns for /grand/radix-io/scratch/robl/hdf5/output-default.h5
+|   ranks in communicator   = 320
+|   independent reads       = 73601284
+|   collective reads        = 0
+|   independent readers     = 320
+|   aggregators             = 160
+|   stripe count            = 160
+|   stripe size             = 1048576
+|   system reads            = 73601284
+|   stripe sized reads      = 0
+|   total bytes for reads   = 589407336 = 562 MiB
+|   ave system read size    = 8
+|   number of read gaps     = 73421362
+|   ave read gap size       = 2551
++--------------------------------------------------------+
++--------------------------------------------------------------------------+
+| MPIIO read by phases, all ranks, for /grand/radix-io/scratch/robl/hdf5/output-default.h5
+|   number of ranks reading        =   320
+|   number of ranks not reading    =     0
+|                                          min         max         ave
+|                                    ----------  ----------  ----------
+|   file read         time         =       5.24      125.71      113.66
+|                                                                      
+|   time scale: 1 = 2**9     clock ticks    min         max         ave
+|                                    ----------  ----------  ---------- ---
+|   total                          =                          763342407       
+|
+|   imbalance                      =          0           0           0  0%
+|   local compute                  =     119966      295806      222843  0%
+|   file read                      =   35196792   843762670   762857119 99%
+|   other                          =          0           0           0  0%
+|                                                                     
+|   raw read BW (MiB/s)            =                              4.946
+|   net read BW (MiB/s)            =                              4.943
++--------------------------------------------------------------------------+
+||
+||   Slow reader file read  Time =  843762670 Rank = 208
+||   Quick reader file read Time =   35196792 Rank = 288
+||   Slow group unlock reader  Time =          0 Rank = 0
+||   Quick group unlock reader Time =          0 Rank = 0
++--------------------------------------------------------+
+|   pfl comp[0]= 160 x      1M      0M -     -1  w=   561M /   569 (1.717 + 0.000)  r=     0M /     0 (0.000 + 0.000)
+|   pfl comp total w=   561M /   569 (1.717 + 0.000)  r=     0M /     0 (0.000 + 0.000)
++--------------------------------------------------------+
+| MPIIO write access patterns for /grand/radix-io/scratch/robl/hdf5/output-collio.h5
+|   ranks in communicator   = 320
+|   independent writes      = 7
+|   collective writes       = 1
+|   independent writers     = 6
+|   aggregators             = 160
+|   stripe count            = 160
+|   stripe size             = 1048576
+|   system writes           = 569
+|   stripe sized writes     = 560
+|   aggregators active      = 0,0,0,320 (1, <= 80, > 80, 160)
+|   total bytes for writes  = 588801496 = 561 MiB
+|   ave system write size   = 1034800
+|   read-modify-write count = 0
+|   read-modify-write bytes = 0
+|   number of write gaps    = 6
+|   ave write gap size      = 363855408
++--------------------------------------------------------+
++--------------------------------------------------------------------------+
+| MPIIO write by phases, all ranks, for /grand/radix-io/scratch/robl/hdf5/output-collio.h5
+|   number of ranks writing        =   160
+|   number of ranks not writing    =   160
+|                                          min         max         ave
+|                                    ----------  ----------  ----------
+|   open/trunc  time               =       0.12        0.12        0.12
+|   close sys time                 =       0.00        0.00        0.00
+|   close fsync time               =       0.00        0.00        0.00
+|   close group-unlock time        =       0.00        0.00        0.00
+|   close other + wait time        =       0.00        0.00        0.00
+|                                                                      
+|   time scale: 1 = 2**7     clock ticks    min         max         ave 
+|                                    ----------  ----------  ---------- ---
+|   total                          =                          668251555       
+|
+|   imbalance                      =        208      897662      163032  0%
+|   open/trunc                     =    3257358     3258354     3258115  0%
+|   close sys                      =       2558        9698        4962  0%
+|   close fsync                    =          0           0           0  0%
+|   close group-unlock             =          0           0           0  0%
+|   close other + wait             =          2         152          12  0%
+|   local compute                  =  104975123   558519226   235541197 35%
+|   wait for coll                  =       1547   102522079    64103796  9%
+|   collective                     =       3210        6870        3857  0%
+|   exchange/write                 =       9824      106508       50588  0%
+|   data send (*)                  =   18949814    84844772    37737547  5%
+|   sieve read                     =          0     1680195      557563  0%
+|   file write                     =          0      277385      234495  0%
+|   other                          =   21004556   483765746   326713635 48%
+|                                                                     
+|   data send BW (MiB/s)           =                            391.502
+|   raw write BW (MiB/s)           =                          63004.939
+|   net write BW (MiB/s)           =                             22.109
+|
+| (*) send and write overlap when number ranks != number of writers    
++--------------------------------------------------------------------------+
+|| Level 2 details wait for coll            min         max         ave 
+||                                   ----------  ----------  ---------- ---
+||   wait for coll.1               =        328    31469625    15274465  2%
+||   wait for coll.2               =        221       69156       20822  0%
+||   wait for coll.3               =        237     4632508     3759984  0%
+||   wait for coll.4               =        402    66302883    45020262  6%
+||   wait for coll.5               =        187       45623       26838  0%
+||   wait for coll.6               =        169        2282        1422  0%
+||
+||   Late arriver among all ranks waitforcoll.1 Time =        328 Rank = 303
+||   Late arriver among all ranks waitforcoll.2 Time =        221 Rank = 32
+||   Late arriver among all ranks waitforcoll.3 Time =        237 Rank = 40
+||   Late arriver among all ranks waitforcoll.4 Time =        402 Rank = 289
+||   Late arriver among all ranks waitforcoll.5 Time =        187 Rank = 198
+||   Late arriver among all ranks waitforcoll.6 Time =        169 Rank = 160
++--------------------------------------------------------------------------+
+| MPIIO write by phases, writers only, for /grand/radix-io/scratch/robl/hdf5/output-collio.h5
+|                                          min         max         ave
+|                                    ----------  ----------  ----------
+|   file write        time         =       0.00        0.01        0.01
+|                                                                      
+|   time scale: 1 = 2**7     clock ticks    min         max         ave
+|                                    ----------  ----------  ---------- ---
+|   total                          =                          668246715       
+|
+|   imbalance                      =        316      897662      163140  0%
+|   local compute                  =  125516991   558519226   334551347 50%
+|   wait for coll                  =       1547    95541479    46101307  6%
+|   collective                     =       3210        4252        3736  0%
+|   exchange/write                 =      60978      106508       80986  0%
+|   data send                      =   22331905    84844772    56169395  8%
+|   sieve read                     =       6507     1680195     1115126  0%
+|   file write                     =      89603      277385      234495  0%
+|   other                          =   21004556   420119625   226569057 33%
+|                                                                     
+|   data send BW (MiB/s)           =                            131.516
+|   raw write BW (MiB/s)           =                          63004.939
+|   net write BW (MiB/s)           =                             22.109
++--------------------------------------------------------------------------+
+|| Level 2 details wait for coll            min         max         ave 
+||                                   ----------  ----------  ---------- ---
+||   wait for coll.1               =        328    25096912    12368065  1%
+||   wait for coll.2               =        221       47382       20536  0%
+||   wait for coll.3               =        237     4632498     3347203  0%
+||   wait for coll.4               =        402    65745842    30356467  4%
+||   wait for coll.5               =        187       17655        8284  0%
+||   wait for coll.6               =        169        1188         750  0%
+||
+||   Late arriver among writers waitforcoll.1 Time =        328 Rank = 303
+||   Late arriver among writers waitforcoll.2 Time =        221 Rank = 32
+||   Late arriver among writers waitforcoll.3 Time =        237 Rank = 40
+||   Late arriver among writers waitforcoll.4 Time =        402 Rank = 289
+||   Late arriver among writers waitforcoll.5 Time =        187 Rank = 198
+||   Late arriver among writers waitforcoll.6 Time =        169 Rank = 160
+||
+||   Slow writer file write  Time =     277385 Rank = 160
+||   Quick writer file write Time =      89603 Rank = 206
+||   Slow group unlock writer  Time =          0 Rank = 0
+||   Quick group unlock writer Time =          0 Rank = 0
++--------------------------------------------------------------------------+
++--------------------------------------------------------+
+|   pfl comp[0]=  1 x      1M      0M -     -1  w=     0M /     8 (0.001 + 0.000)  r=     0M /     0 (0.000 + 0.000)
+|   pfl comp total w=     0M /     8 (0.001 + 0.000)  r=     0M /     0 (0.000 + 0.000)
++--------------------------------------------------------+
+| MPIIO write access patterns for /home/robl/src/io-sleuthing/examples/hdf5/polaris/robl_h5par-comparison-collio_id16536-16536_3-17-51462-3971621261006749948.darshan_partial
+|   ranks in communicator   = 320
+|   independent writes      = 2
+|   collective writes       = 6
+|   independent writers     = 1
+|   aggregators             = 4
+|   stripe count            = 1
+|   stripe size             = 1048576
+|   system writes           = 8
+|   stripe sized writes     = 0
+|   aggregators active      = 1920,0,0,0 (1, <= 2, > 2, 4)
+|   total bytes for writes  = 53682
+|   ave system write size   = 6710
+|   read-modify-write count = 0
+|   read-modify-write bytes = 0
+|   number of write gaps    = 0
+|   ave write gap size      = NA
++--------------------------------------------------------+
++--------------------------------------------------------------------------+
+| MPIIO write by phases, all ranks, for /home/robl/src/io-sleuthing/examples/hdf5/polaris/robl_h5par-comparison-collio_id16536-16536_3-17-51462-3971621261006749948.darshan_partial
+|   number of ranks writing        =     1
+|   number of ranks not writing    =   319
+|                                          min         max         ave
+|                                    ----------  ----------  ----------
+|   open/trunc  time               =       0.00        0.00        0.00
+|   close sys time                 =       0.00        0.00        0.00
+|   close fsync time               =       0.00        0.00        0.00
+|   close group-unlock time        =       0.00        0.00        0.00
+|   close other + wait time        =       0.00        0.00        0.00
+|                                                                      
+|   time scale: 1 = 2**0     clock ticks    min         max         ave 
+|                                    ----------  ----------  ---------- ---
+|   total                          =                           11402039       
+|
+|   imbalance                      =     210168      763420      523615  4%
+|   open/trunc                     =    4705876     4726708     4713776 41%
+|   close sys                      =         28      550760        6186  0%
+|   close fsync                    =          0           0           0  0%
+|   close group-unlock             =          0           0           0  0%
+|   close other + wait             =         84        1848         743  0%
+|   local compute                  =     321748     2347156      438496  3%
+|   wait for coll                  =    1006068     2617272     2247099 19%
+|   collective                     =    1366260     1750728     1517267 13%
+|   exchange/write                 =      14364       26264       16010  0%
+|   data send (*)                  =      12348      842604       16782  0%
+|   sieve read                     =          0       31276         263  0%
+|   file write                     =          0     1640352     1640352 14%
+|   other                          =     173096     1943956     1916671 16%
+|                                                                     
+|   data send BW (MiB/s)           =                          10132.273
+|   raw write BW (MiB/s)           =                            105.109
+|   net write BW (MiB/s)           =                             15.122
+|
+| (*) send and write overlap when number ranks != number of writers    
++--------------------------------------------------------------------------+
+|| Level 2 details wait for coll            min         max         ave 
+||                                   ----------  ----------  ---------- ---
+||   wait for coll.1               =     184884      980392      816342  7%
+||   wait for coll.2               =     176848      266924      224838  1%
+||   wait for coll.3               =     130396      507276      461793  4%
+||   wait for coll.4               =     139720      323092      286706  2%
+||   wait for coll.5               =     189756      255864      221825  1%
+||   wait for coll.6               =     184464      283724      235592  2%
+||
+||   Late arriver among all ranks waitforcoll.1 Time =     184884 Rank = 192
+||   Late arriver among all ranks waitforcoll.2 Time =     176848 Rank = 64
+||   Late arriver among all ranks waitforcoll.3 Time =     130396 Rank = 0
+||   Late arriver among all ranks waitforcoll.4 Time =     139720 Rank = 0
+||   Late arriver among all ranks waitforcoll.5 Time =     189756 Rank = 160
+||   Late arriver among all ranks waitforcoll.6 Time =     184464 Rank = 176
++--------------------------------------------------------------------------+
+| MPIIO write by phases, writers only, for /home/robl/src/io-sleuthing/examples/hdf5/polaris/robl_h5par-comparison-collio_id16536-16536_3-17-51462-3971621261006749948.darshan_partial
+|                                          min         max         ave
+|                                    ----------  ----------  ----------
+|   file write        time         =       0.00        0.00        0.00
+|                                                                      
+|   time scale: 1 = 2**0     clock ticks    min         max         ave
+|                                    ----------  ----------  ---------- ---
+|   total                          =                           13144292       
+|
+|   imbalance                      =     761656      761656      761656  5%
+|   local compute                  =    2347156     2347156     2347156 17%
+|   wait for coll                  =    1152284     1152284     1152284  8%
+|   collective                     =    1487528     1487528     1487528 11%
+|   exchange/write                 =      26264       26264       26264  0%
+|   data send                      =     842604      842604      842604  6%
+|   sieve read                     =       5572        5572        5572  0%
+|   file write                     =    1640352     1640352     1640352 12%
+|   other                          =     173096      173096      173096  1%
+|                                                                     
+|   data send BW (MiB/s)           =                              4.826
+|   raw write BW (MiB/s)           =                            105.109
+|   net write BW (MiB/s)           =                             13.117
++--------------------------------------------------------------------------+
+|| Level 2 details wait for coll            min         max         ave 
+||                                   ----------  ----------  ---------- ---
+||   wait for coll.1               =     196252      196252      196252  1%
+||   wait for coll.2               =     207060      207060      207060  1%
+||   wait for coll.3               =     130396      130396      130396  0%
+||   wait for coll.4               =     139720      139720      139720  1%
+||   wait for coll.5               =     236628      236628      236628  1%
+||   wait for coll.6               =     242228      242228      242228  1%
+||
+||   Late arriver among writers waitforcoll.1 Time =     196252 Rank = 0
+||   Late arriver among writers waitforcoll.2 Time =     207060 Rank = 0
+||   Late arriver among writers waitforcoll.3 Time =     130396 Rank = 0
+||   Late arriver among writers waitforcoll.4 Time =     139720 Rank = 0
+||   Late arriver among writers waitforcoll.5 Time =     236628 Rank = 0
+||   Late arriver among writers waitforcoll.6 Time =     242228 Rank = 0
+||
+||   Slow writer file write  Time =    1640352 Rank = 0
+||   Quick writer file write Time =    1640352 Rank = 0
+||   Slow group unlock writer  Time =          0 Rank = 0
+||   Quick group unlock writer Time =          0 Rank = 0
++--------------------------------------------------------------------------+
++--------------------------------------------------------+
+|   pfl comp[0]= 160 x      1M      0M -     -1  w=     0M /     0 (0.000 + 0.000)  r=   562M /  1846 (9.000 + 0.000)
+|   pfl comp total w=     0M /     0 (0.000 + 0.000)  r=   562M /  1846 (9.000 + 0.000)
++--------------------------------------------------------+
+| MPIIO read access patterns for /grand/radix-io/scratch/robl/hdf5/output-collio.h5
+|   ranks in communicator   = 320
+|   independent reads       = 1284
+|   collective reads        = 1
+|   independent readers     = 320
+|   aggregators             = 160
+|   stripe count            = 160
+|   stripe size             = 1048576
+|   system reads            = 1846
+|   stripe sized reads      = 560
+|   total bytes for reads   = 589407336 = 562 MiB
+|   ave system read size    = 319288
+|   number of read gaps     = 322
+|   ave read gap size       = 392
++--------------------------------------------------------+
++--------------------------------------------------------------------------+
+| MPIIO read by phases, all ranks, for /grand/radix-io/scratch/robl/hdf5/output-collio.h5
+|   number of ranks reading        =   320
+|   number of ranks not reading    =     0
+|                                          min         max         ave
+|                                    ----------  ----------  ----------
+|   file read         time         =       0.00        0.03        0.02
+|                                                                      
+|   time scale: 1 = 2**0     clock ticks    min         max         ave
+|                                    ----------  ----------  ---------- ---
+|   total                          =                          355378268       
+|
+|   imbalance                      =      29960       84280       65918  0%
+|   local compute                  =   47323248   172755156    95453764 26%
+|   wait for coll                  =     129220    20857872     9048165  2%
+|   collective                     =     476644     1386448      510575  0%
+|   read/exchange                  =    1212596    17710840     7102818  1%
+|   file read                      =      33320    90421156    78604391 22%
+|   data receive                   =   47793312    86262204    70653238 19%
+|   other                          =    7592704    98545832    62487725 17%
+|                                                                     
+|   data receive BW (MiB/s)        =                          26766.154
+|   raw read BW (MiB/s)            =                          24083.465
+|   net read BW (MiB/s)            =                           5326.905
++--------------------------------------------------------------------------+
+|| Level 2 details wait for coll            min         max         ave 
+||                                   ----------  ----------  ---------- ---
+||   wait for coll.1               =      29764     3993444     2776963  0%
+||   wait for coll.2               =      29344     6806184     1578241  0%
+||   wait for coll.3               =          0           0           0  0%
+||   wait for coll.4               =          0           0           0  0%
+||   wait for coll.5               =          0           0           0  0%
+||   wait for coll.6               =          0           0           0  0%
+||   wait for coll.7               =      70112    10058244     4692960  1%
+||
+||   Late arriver among all ranks waitforcoll.1 Time =      29764 Rank = 295
+||   Late arriver among all ranks waitforcoll.2 Time =      29344 Rank = 174
+||   Late arriver among all ranks waitforcoll.3 Time =          0 Rank = 0
+||   Late arriver among all ranks waitforcoll.4 Time =          0 Rank = 0
+||   Late arriver among all ranks waitforcoll.5 Time =          0 Rank = 0
+||   Late arriver among all ranks waitforcoll.6 Time =          0 Rank = 0
+||   Late arriver among all ranks waitforcoll.7 Time =      70112 Rank = 256
+||
+||   Slow reader file read  Time =   90421156 Rank = 288
+||   Quick reader file read Time =      33320 Rank = 25
+||   Slow group unlock reader  Time =          0 Rank = 0
+||   Quick group unlock reader Time =          0 Rank = 0
++--------------------------------------------------------+
+|   pfl comp[0]= 160 x      1M      0M -     -1  w=   561M /   564 (1.788 + 0.000)  r=     0M /     0 (0.000 + 0.000)
+|   pfl comp total w=   561M /   564 (1.788 + 0.000)  r=     0M /     0 (0.000 + 0.000)
++--------------------------------------------------------+
+| MPIIO write access patterns for /grand/radix-io/scratch/robl/hdf5/output-collmd.h5
+|   ranks in communicator   = 320
+|   independent writes      = 0
+|   collective writes       = 3
+|   independent writers     = 0
+|   aggregators             = 160
+|   stripe count            = 160
+|   stripe size             = 1048576
+|   system writes           = 564
+|   stripe sized writes     = 560
+|   aggregators active      = 640,0,0,320 (1, <= 80, > 80, 160)
+|   total bytes for writes  = 588801496 = 561 MiB
+|   ave system write size   = 1043974
+|   read-modify-write count = 0
+|   read-modify-write bytes = 0
+|   number of write gaps    = 1
+|   ave write gap size      = 337641472
++--------------------------------------------------------+
++--------------------------------------------------------------------------+
+| MPIIO write by phases, all ranks, for /grand/radix-io/scratch/robl/hdf5/output-collmd.h5
+|   number of ranks writing        =   160
+|   number of ranks not writing    =   160
+|                                          min         max         ave
+|                                    ----------  ----------  ----------
+|   open/trunc  time               =       0.10        0.10        0.10
+|   close sys time                 =       0.00        0.00        0.00
+|   close fsync time               =       0.00        0.00        0.00
+|   close group-unlock time        =       0.00        0.00        0.00
+|   close other + wait time        =       0.00        0.00        0.00
+|                                                                      
+|   time scale: 1 = 2**7     clock ticks    min         max         ave 
+|                                    ----------  ----------  ---------- ---
+|   total                          =                          648920347       
+|
+|   imbalance                      =        717      896468      117093  0%
+|   open/trunc                     =    3053008     3054882     3053628  0%
+|   close sys                      =       2458       10843        5195  0%
+|   close fsync                    =          0           0           0  0%
+|   close group-unlock             =          0           0           0  0%
+|   close other + wait             =          1         229          20  0%
+|   local compute                  =  103755680   553149327   233281135 35%
+|   wait for coll                  =       5279   103551926    65452546 10%
+|   collective                     =       7195       10590        8949  0%
+|   exchange/write                 =       9432      111091       51224  0%
+|   data send (*)                  =   18996543    76891626    35949446  5%
+|   sieve read                     =          0     1883067      624123  0%
+|   file write                     =          0      309774      244113  0%
+|   other                          =   14910126   464895061   310254926 47%
+|                                                                     
+|   data send BW (MiB/s)           =                            471.136
+|   raw write BW (MiB/s)           =                          69382.016
+|   net write BW (MiB/s)           =                             26.100
+|
+| (*) send and write overlap when number ranks != number of writers    
++--------------------------------------------------------------------------+
+|| Level 2 details wait for coll            min         max         ave 
+||                                   ----------  ----------  ---------- ---
+||   wait for coll.1               =        641    31932275    15828990  2%
+||   wait for coll.2               =        790       57491       19571  0%
+||   wait for coll.3               =       1450     5038957     4114112  0%
+||   wait for coll.4               =       1071    66473613    45459958  7%
+||   wait for coll.5               =        730       46457       27694  0%
+||   wait for coll.6               =        595        3131        2219  0%
+||
+||   Late arriver among all ranks waitforcoll.1 Time =        641 Rank = 303
+||   Late arriver among all ranks waitforcoll.2 Time =        790 Rank = 224
+||   Late arriver among all ranks waitforcoll.3 Time =       1450 Rank = 40
+||   Late arriver among all ranks waitforcoll.4 Time =       1071 Rank = 292
+||   Late arriver among all ranks waitforcoll.5 Time =        730 Rank = 288
+||   Late arriver among all ranks waitforcoll.6 Time =        595 Rank = 160
++--------------------------------------------------------------------------+
+| MPIIO write by phases, writers only, for /grand/radix-io/scratch/robl/hdf5/output-collmd.h5
+|                                          min         max         ave
+|                                    ----------  ----------  ----------
+|   file write        time         =       0.00        0.01        0.01
+|                                                                      
+|   time scale: 1 = 2**7     clock ticks    min         max         ave
+|                                    ----------  ----------  ---------- ---
+|   total                          =                          648915272       
+|
+|   imbalance                      =        937      896468      117225  0%
+|   local compute                  =  128565891   553149327   331756741 51%
+|   wait for coll                  =       5279    96629011    47641114  7%
+|   collective                     =       7195       10247        8695  0%
+|   exchange/write                 =      60096      111091       81929  0%
+|   data send                      =   23343659    76891626    52640055  8%
+|   sieve read                     =       6670     1883067     1248247  0%
+|   file write                     =      87906      309774      244113  0%
+|   other                          =   14910126   395455289   212123518 32%
+|                                                                     
+|   data send BW (MiB/s)           =                            160.877
+|   raw write BW (MiB/s)           =                          69382.016
+|   net write BW (MiB/s)           =                             26.101
++--------------------------------------------------------------------------+
+|| Level 2 details wait for coll            min         max         ave 
+||                                   ----------  ----------  ---------- ---
+||   wait for coll.1               =        641    25586814    12874126  1%
+||   wait for coll.2               =        790       46349       18768  0%
+||   wait for coll.3               =       1450     5038926     3655491  0%
+||   wait for coll.4               =       1071    65937688    31082023  4%
+||   wait for coll.5               =        730       17267        9161  0%
+||   wait for coll.6               =        595        1965        1543  0%
+||
+||   Late arriver among writers waitforcoll.1 Time =        641 Rank = 303
+||   Late arriver among writers waitforcoll.2 Time =        790 Rank = 224
+||   Late arriver among writers waitforcoll.3 Time =       1450 Rank = 40
+||   Late arriver among writers waitforcoll.4 Time =       1071 Rank = 292
+||   Late arriver among writers waitforcoll.5 Time =        730 Rank = 288
+||   Late arriver among writers waitforcoll.6 Time =        595 Rank = 160
+||
+||   Slow writer file write  Time =     309774 Rank = 0
+||   Quick writer file write Time =      87906 Rank = 233
+||   Slow group unlock writer  Time =          0 Rank = 0
+||   Quick group unlock writer Time =          0 Rank = 0
++--------------------------------------------------------------------------+
++--------------------------------------------------------+
+|   pfl comp[0]=  1 x      1M      0M -     -1  w=     0M /     8 (0.001 + 0.000)  r=     0M /     0 (0.000 + 0.000)
+|   pfl comp total w=     0M /     8 (0.001 + 0.000)  r=     0M /     0 (0.000 + 0.000)
++--------------------------------------------------------+
+| MPIIO write access patterns for /home/robl/src/io-sleuthing/examples/hdf5/polaris/robl_h5par-comparison-collmd_id16619-16619_3-17-51494-3236535588690161696.darshan_partial
+|   ranks in communicator   = 320
+|   independent writes      = 2
+|   collective writes       = 6
+|   independent writers     = 1
+|   aggregators             = 4
+|   stripe count            = 1
+|   stripe size             = 1048576
+|   system writes           = 8
+|   stripe sized writes     = 0
+|   aggregators active      = 1920,0,0,0 (1, <= 2, > 2, 4)
+|   total bytes for writes  = 53927
+|   ave system write size   = 6740
+|   read-modify-write count = 0
+|   read-modify-write bytes = 0
+|   number of write gaps    = 0
+|   ave write gap size      = NA
++--------------------------------------------------------+
++--------------------------------------------------------------------------+
+| MPIIO write by phases, all ranks, for /home/robl/src/io-sleuthing/examples/hdf5/polaris/robl_h5par-comparison-collmd_id16619-16619_3-17-51494-3236535588690161696.darshan_partial
+|   number of ranks writing        =     1
+|   number of ranks not writing    =   319
+|                                          min         max         ave
+|                                    ----------  ----------  ----------
+|   open/trunc  time               =       0.00        0.00        0.00
+|   close sys time                 =       0.00        0.00        0.00
+|   close fsync time               =       0.00        0.00        0.00
+|   close group-unlock time        =       0.00        0.00        0.00
+|   close other + wait time        =       0.00        0.00        0.00
+|                                                                      
+|   time scale: 1 = 2**0     clock ticks    min         max         ave 
+|                                    ----------  ----------  ---------- ---
+|   total                          =                           12371530       
+|
+|   imbalance                      =     232092      455532      348760  2%
+|   open/trunc                     =    5005728     5045964     5038180 40%
+|   close sys                      =         28      586824        6741  0%
+|   close fsync                    =          0           0           0  0%
+|   close group-unlock             =          0           0           0  0%
+|   close other + wait             =        252        1904         778  0%
+|   local compute                  =     313880     2373560      434431  3%
+|   wait for coll                  =    1069152     3037496     2455719 19%
+|   collective                     =    1703044     2446724     2098181 16%
+|   exchange/write                 =      14112       28560       16058  0%
+|   data send (*)                  =      12152      855036       16936  0%
+|   sieve read                     =          0       36540         307  0%
+|   file write                     =          0     1767024     1767024 14%
+|   other                          =     170688     1974924     1949912 15%
+|                                                                     
+|   data send BW (MiB/s)           =                          11563.088
+|   raw write BW (MiB/s)           =                            112.368
+|   net write BW (MiB/s)           =                             16.050
+|
+| (*) send and write overlap when number ranks != number of writers    
++--------------------------------------------------------------------------+
+|| Level 2 details wait for coll            min         max         ave 
+||                                   ----------  ----------  ---------- ---
+||   wait for coll.1               =     192472     1000944      793252  6%
+||   wait for coll.2               =     213024      643944      431303  3%
+||   wait for coll.3               =     136976      503272      462031  3%
+||   wait for coll.4               =     138376      330400      292436  2%
+||   wait for coll.5               =     204260      273028      238473  1%
+||   wait for coll.6               =     184044      285908      238222  1%
+||
+||   Late arriver among all ranks waitforcoll.1 Time =     192472 Rank = 192
+||   Late arriver among all ranks waitforcoll.2 Time =     213024 Rank = 256
+||   Late arriver among all ranks waitforcoll.3 Time =     136976 Rank = 0
+||   Late arriver among all ranks waitforcoll.4 Time =     138376 Rank = 0
+||   Late arriver among all ranks waitforcoll.5 Time =     204260 Rank = 128
+||   Late arriver among all ranks waitforcoll.6 Time =     184044 Rank = 160
++--------------------------------------------------------------------------+
+| MPIIO write by phases, writers only, for /home/robl/src/io-sleuthing/examples/hdf5/polaris/robl_h5par-comparison-collmd_id16619-16619_3-17-51494-3236535588690161696.darshan_partial
+|                                          min         max         ave
+|                                    ----------  ----------  ----------
+|   file write        time         =       0.00        0.00        0.00
+|                                                                      
+|   time scale: 1 = 2**0     clock ticks    min         max         ave
+|                                    ----------  ----------  ---------- ---
+|   total                          =                           14127204       
+|
+|   imbalance                      =     455112      455112      455112  3%
+|   local compute                  =    2373560     2373560     2373560 16%
+|   wait for coll                  =    1172920     1172920     1172920  8%
+|   collective                     =    2261448     2261448     2261448 16%
+|   exchange/write                 =      28560       28560       28560  0%
+|   data send                      =     855036      855036      855036  6%
+|   sieve read                     =       5068        5068        5068  0%
+|   file write                     =    1767024     1767024     1767024 12%
+|   other                          =     170688      170688      170688  1%
+|                                                                     
+|   data send BW (MiB/s)           =                              5.460
+|   raw write BW (MiB/s)           =                            112.368
+|   net write BW (MiB/s)           =                             14.055
++--------------------------------------------------------------------------+
+|| Level 2 details wait for coll            min         max         ave 
+||                                   ----------  ----------  ---------- ---
+||   wait for coll.1               =     197036      197036      197036  1%
+||   wait for coll.2               =     217420      217420      217420  1%
+||   wait for coll.3               =     136976      136976      136976  0%
+||   wait for coll.4               =     138376      138376      138376  0%
+||   wait for coll.5               =     242368      242368      242368  1%
+||   wait for coll.6               =     240744      240744      240744  1%
+||
+||   Late arriver among writers waitforcoll.1 Time =     197036 Rank = 0
+||   Late arriver among writers waitforcoll.2 Time =     217420 Rank = 0
+||   Late arriver among writers waitforcoll.3 Time =     136976 Rank = 0
+||   Late arriver among writers waitforcoll.4 Time =     138376 Rank = 0
+||   Late arriver among writers waitforcoll.5 Time =     242368 Rank = 0
+||   Late arriver among writers waitforcoll.6 Time =     240744 Rank = 0
+||
+||   Slow writer file write  Time =    1767024 Rank = 0
+||   Quick writer file write Time =    1767024 Rank = 0
+||   Slow group unlock writer  Time =          0 Rank = 0
+||   Quick group unlock writer Time =          0 Rank = 0
++--------------------------------------------------------------------------+
++--------------------------------------------------------+
+|   pfl comp[0]= 160 x      1M      0M -     -1  w=     0M /     0 (0.000 + 0.000)  r=   562M /  1846 (8.588 + 0.000)
+|   pfl comp total w=     0M /     0 (0.000 + 0.000)  r=   562M /  1846 (8.588 + 0.000)
++--------------------------------------------------------+
+| MPIIO read access patterns for /grand/radix-io/scratch/robl/hdf5/output-collmd.h5
+|   ranks in communicator   = 320
+|   independent reads       = 1284
+|   collective reads        = 1
+|   independent readers     = 320
+|   aggregators             = 160
+|   stripe count            = 160
+|   stripe size             = 1048576
+|   system reads            = 1846
+|   stripe sized reads      = 560
+|   total bytes for reads   = 589407336 = 562 MiB
+|   ave system read size    = 319288
+|   number of read gaps     = 322
+|   ave read gap size       = 392
++--------------------------------------------------------+
++--------------------------------------------------------------------------+
+| MPIIO read by phases, all ranks, for /grand/radix-io/scratch/robl/hdf5/output-collmd.h5
+|   number of ranks reading        =   320
+|   number of ranks not reading    =     0
+|                                          min         max         ave
+|                                    ----------  ----------  ----------
+|   file read         time         =       0.00        0.02        0.02
+|                                                                      
+|   time scale: 1 = 2**0     clock ticks    min         max         ave
+|                                    ----------  ----------  ---------- ---
+|   total                          =                          354010499       
+|
+|   imbalance                      =      23716       75068       56511  0%
+|   local compute                  =   38092376   163183160    85499965 24%
+|   wait for coll                  =     231812    20634040     9347913  2%
+|   collective                     =     422380      518644      453480  0%
+|   read/exchange                  =    1257480    14895804     7014736  1%
+|   file read                      =      31864    89042996    75006964 21%
+|   data receive                   =   44571100    96178656    80075425 22%
+|   other                          =    9189376    99541736    63883728 18%
+|                                                                     
+|   data receive BW (MiB/s)        =                          27073.708
+|   raw read BW (MiB/s)            =                          28932.978
+|   net read BW (MiB/s)            =                           6130.256
++--------------------------------------------------------------------------+
+|| Level 2 details wait for coll            min         max         ave 
+||                                   ----------  ----------  ---------- ---
+||   wait for coll.1               =      34440     3877468     2706712  0%
+||   wait for coll.2               =      37436     6966456     1632355  0%
+||   wait for coll.3               =          0           0           0  0%
+||   wait for coll.4               =          0           0           0  0%
+||   wait for coll.5               =          0           0           0  0%
+||   wait for coll.6               =          0           0           0  0%
+||   wait for coll.7               =     159936     9790116     5008845  1%
+||
+||   Late arriver among all ranks waitforcoll.1 Time =      34440 Rank = 295
+||   Late arriver among all ranks waitforcoll.2 Time =      37436 Rank = 128
+||   Late arriver among all ranks waitforcoll.3 Time =          0 Rank = 0
+||   Late arriver among all ranks waitforcoll.4 Time =          0 Rank = 0
+||   Late arriver among all ranks waitforcoll.5 Time =          0 Rank = 0
+||   Late arriver among all ranks waitforcoll.6 Time =          0 Rank = 0
+||   Late arriver among all ranks waitforcoll.7 Time =     159936 Rank = 0
+||
+||   Slow reader file read  Time =   89042996 Rank = 65
+||   Quick reader file read Time =      31864 Rank = 29
+||   Slow group unlock reader  Time =          0 Rank = 0
+||   Quick group unlock reader Time =          0 Rank = 0
