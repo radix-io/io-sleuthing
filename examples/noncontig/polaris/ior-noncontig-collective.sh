@@ -88,7 +88,8 @@ mpiexec -n ${NTOTRANKS} --ppn ${NRANKS_PER_NODE} --depth=${NDEPTH} --cpu-bind de
 #                              multiplier of 2 or more is usually best for
 #                              writing the file
 export  IOR_HINT__MPI__cray_cb_write_lock_mode=2
-export  IOR_HINT__MPI__cb_nodes_multiplier=4
+export  IOR_HINT__MPI__cb_nodes_multiplier=2
+export  IOR_HINT__MPI__striping_factor=${NTOTRANKS}
 rm -f ${OUTPUT}/ior-noncontig-coll-mode2-$segs.out
 mpiexec -n ${NTOTRANKS} --ppn ${NRANKS_PER_NODE} --depth=${NDEPTH} --cpu-bind depth ior --mpiio.showHints -a MPIIO -w \
         --collective \

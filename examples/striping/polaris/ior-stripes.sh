@@ -18,7 +18,7 @@ cd ${PBS_O_WORKDIR}
 NNODES=`wc -l < $PBS_NODEFILE`
 # Testing I/O performance, not trying to mimmic an application.  Only need a
 # few clients to saturate the link
-NRANKS_PER_NODE=4
+NRANKS_PER_NODE=16
 NDEPTH=1
 NTHREADS=1
 NTOTRANKS=$(( NNODES * NRANKS_PER_NODE ))
@@ -44,7 +44,10 @@ OUTPUT=/grand/radix-io/scratch/$USER/ior
 # on Polaris the 'grand' file system has 160 lustre servers.  Other Lustre
 # deployments might have more or less.  The last "-1" value will request all
 # available servers.
-for stripe in 1 2 5 10 20 40 80 -1; do
+# additionally! Lustre has an "overstripe" feature: we can put multiple stripes
+# on an OST, so while '160' is "every server", we can crank it up even higher
+#for stripe in 1 2 5 10 20 40 80 -1; do
+for stripe in 1 5 20 80 -1 320 $NTOTRANKS; do
     rm  -f ${OUTPUT}/ior-stripe-$stripe.out
     export IOR_HINT__MPI__striping_factor=$stripe
         # -a MPIIO: using MPI-IO so we can pass the "striping_factor" hint
