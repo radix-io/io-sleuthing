@@ -7,6 +7,8 @@ CC=cc
 CPPFLAGS=-I${HDF5}/include
 LDFLAGS=-L${HDF5}/lib
 
+all: h5par-comparison
+
 h5par-comparison:  h5par-comparison.c
 	$(MPICC) $(CFLAGS) $(CPPFLAGS) $^ -o $@ $(LDFLAGS) -lhdf5
 	$(MPICC) $(CFLAGS) $(CPPFLAGS) -DUSE_COLL_DATA $^ -o h5par-comparison-collio $(LDFLAGS) -lhdf5
