@@ -19,10 +19,13 @@ NTOTRANKS=$(( NNODES * NRANKS_PER_NODE ))
 export DARSHAN_LOG_DIR_PATH=`pwd`
 export LD_PRELOAD=${DARSHAN_RUNTIME_ROOT}/lib/libdarshan.so
 
+export DARSHAN_CONFIG_PATH=`pwd`/darshan-dlio.cfg
+export DARSHAN_ENABLE_NONMPI=1
+
 source ./dlio-environment.sh
 mpiexec -n ${NTOTRANKS} python ${DLIO}/src/dlio_benchmark.py workload=unet3d \
 	++workload.workflow.generate_data=True \
 	++workload.workflow.train=False \
-	++dataset.data_folder=/grand/radix-io/scratch/robl/dlio/data/unet3d/ \
-	++checkpoint.checkpoint_folder=/grand/radix-io/scratch/robl/dlio/data/unet3d/ \
+	++workload.dataset.data_folder=/grand/radix-io/scratch/robl/dlio/data/unet3d/ \
+	++workload.checkpoint.checkpoint_folder=/grand/radix-io/scratch/robl/dlio/data/unet3d/ \
 	++workload.dataset.num_files_train=64
