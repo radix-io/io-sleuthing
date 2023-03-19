@@ -5,7 +5,7 @@ import pandas as pd
 
 
 def process_input(data):
-    df = pd.read_csv(data, delim_whitespace=True)
+    df = pd.read_csv(data, delim_whitespace=True, nrows=8)
     # ior output doesn't contain stripe count... a bit fragile, sorry!
     df.insert(0, "stripe", [1, 2, 5, 10, 20, 40, 80, 160])
     # ior output is in MiB, but GiB might be more legible here
@@ -26,12 +26,11 @@ def process_input(data):
     return(df, yerr)
 
 
-(stripe_writes, yerr) = process_input("ior-write.dat")
-
+(stripe_writes, yerr) = process_input("ior-write128.dat")
 plt.errorbar("stripe", "Mean(MiB)", data=stripe_writes, yerr=yerr,
-             label="Write")
+             label="128 nodes")
 
-(stripe_reads, yerr) = process_input("ior-read.dat")
+(stripe_reads, yerr) = process_input("ior-read128.dat")
 plt.errorbar("stripe", "Mean(MiB)", data=stripe_reads, yerr=yerr,
              label="Read")
 
@@ -40,4 +39,4 @@ plt.xlabel("stripe count")
 plt.ylabel("Bandwidth (GiB)")
 plt.title("IOR performance vs stripe count")
 
-plt.savefig("ior-stripe-count.png")
+plt.savefig("ior-stripe-count-128.png")
