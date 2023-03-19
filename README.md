@@ -26,26 +26,22 @@ Noon to 3:30 pm
 (All times US Central)
 
 - Introduction:
-  - overview of the day
+  - Challenges
   - terminology and technologies
-- System overview
-  - Walk through storage and networking features of systems we're using
-- Simulation I/O
-  - Describe a non-trivial I/O kernel
-  - Execute on exemplar machine
-- I/O libraries
+- File system
+  - Walk through storage and networking features of exemplar system
+- Benchmarking
+  - challenges of I/O benchmarking
+  - the IOR benchmark
+  - Lustre + striping
+- Characterizing I/O with Darshan
 - Break
+- Analysis of I/O with Darshan
+- MPI-IO: the core of the simulation I/O stack
+- I/O libraries
 - Machine Learning I/O
   - Describe a non-trivial I/O kernel
   - Execute on exemplar machine
-- Benchmarking
-  - establishing the ground truths
-  - single node benchmarking
-  - parallel benchmarking
-  - benchmarking pitfalls
-- Analysis
-  - Darshan DXT data
-  - py-darshan
 
 ## Tools and Libraries
 
