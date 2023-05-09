@@ -25,21 +25,23 @@ Monday 20 March from Noon to 3:15 pm
 Noon to 3:30 pm
 (All times US Central)
 
-- Introduction:
+- [Introduction](https://youtu.be/fDi_hSHynmk)
   - Challenges
   - terminology and technologies
-- File system
+- [File system](https://youtu.be/fDi_hSHynmk?t=1065)
   - Walk through storage and networking features of exemplar system
-- Benchmarking
+- [Benchmarking](https://youtu.be/fDi_hSHynmk?t=1572)
   - challenges of I/O benchmarking
   - the IOR benchmark
   - Lustre + striping
-- Characterizing I/O with Darshan
+- [Characterizing I/O with Darshan](https://youtu.be/iHX7xsfpE44?t=313)
 - Break
-- Analysis of I/O with Darshan
-- MPI-IO: the core of the simulation I/O stack
+- [Analysis of I/O with Darshan](https://youtu.be/iHX7xsfpE44?t=1572)
+- [MPI-IO: the core of the simulation I/O stack](https://youtu.be/kDKn4eYUg9A?t=5)
 - I/O libraries
-- Machine Learning I/O
+  - [Parallel-NetCDF](https://youtu.be/B3NNyk1UpLo?t=729)
+  - [HDF5](https://youtu.be/B3NNyk1UpLo?t=1561)
+- [Machine Learning I/O](https://youtu.be/sW1GRK25CM8)
   - Describe a non-trivial I/O kernel
   - Execute on exemplar machine
 
@@ -62,5 +64,4 @@ Noon to 3:30 pm
 
 ## Materials
 
-Talk will be recorded.  Once we have videos edited we will post links to them
-here.
+- [Video recording](https://www.youtube.com/playlist?list=PLGj2a3KTwhRZSKVy-ZrjarFuW-coqS7F9) of the talk.
