@@ -33,17 +33,21 @@ Noon to 3:30 pm
 - Benchmarking [(Video)](https://youtu.be/fDi_hSHynmk?t=1572) [(Slides)](presentation/io-sleuthing-benchmarking.pdf)
   - challenges of I/O benchmarking
   - the IOR benchmark
-  - Lustre + striping
+  - Lustre + striping:  [Stripe-width Exercise](exampes/striping)
 - Characterizing I/O with Darshan [(Video)](https://youtu.be/iHX7xsfpE44?t=313) [(Slides)](presentation/io-sleuthing-darshan-survey.pdf)
 - Break
 - Analysis of I/O with Darshan [(Video)](https://youtu.be/iHX7xsfpE44?t=1572) [(Slides)](presentation/io-sleuthing-darshan-analysis.pdf)
 - MPI-IO: the core of the simulation I/O stack [(Video)](https://youtu.be/kDKn4eYUg9A?t=5) [(Slides)](presentation/io-sleuthing-mpiio.pdf)
+  - Experimenting with noncongituous-I/O [Exercise](examples/noncontig)
 - I/O libraries
   - Parallel-NetCDF [(Video)](https://youtu.be/B3NNyk1UpLo?t=729) [(Slides)](presentation/io-sleuthing-pnetcdf.pdf)
+    - Exploring PnetCDF features [Exercise](examples/pnetcdf)
   - HDF5 [(Video)](https://youtu.be/B3NNyk1UpLo?t=1561)  [(Slides)](presentation/io-sleuthing-hdf5.pdf)
+    - Exploring HDF5 features [Exercise](examples/hdf5)
 - Machine Learning I/O [(Video)](https://youtu.be/sW1GRK25CM8) [(Slides)](presetation/io-sleuthing-ML-and-closing.pdf)
   - Describe a non-trivial I/O kernel
   - Execute on exemplar machine
+  - DLIO [Demonstration](examples/dlio)
 
 ## Tools and Libraries
 
