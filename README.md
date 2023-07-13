@@ -70,3 +70,32 @@ Noon to 3:30 pm
 
 - The full [Slide presentation](presentation/IO-sleuthing-BSSW.pdf)
 - [Video recording](https://www.youtube.com/playlist?list=PLGj2a3KTwhRZSKVy-ZrjarFuW-coqS7F9) of the talk.
+
+## Using These Materials
+
+The lecture and supporting experiments ran on the [Polaris](https://www.alcf.anl.gov/polaris) machine
+at [Argonne's](https://www.anl.gov)  [ALCF](www.alcf.anl.gov).  The goal,
+however, is for people to try out these experiments on their own facilities.
+
+Each experiment in the `examples` directory has a README and some scripts for
+generating plots.  The experiments also have a platform-specific directory
+where we store things like job submission scripts and results.  Contribute pull
+requests for your own platform.
+
+If you have questions or just want to chat about topics, start up a github
+discussion.  It is my hope that while the presentation was given in 2023, the
+topics and approaches will live on.
+
+
+
+## Acknowledgement
+
+This work was supported by the Better Scientific Software Fellowship Program,
+funded by the Exascale Computing Project (17-SC-20-SC), a collaborative effort
+of the U.S. Department of Energy (DOE) Office of Science and the National
+Nuclear Security Administration; and by the National Science Foundation (NSF)
+under Grant No. 2154495.
+
+Any opinions, findings, and conclusions or recommendations expressed in this
+material are those of the author(s) and do not necessarily reflect the views of
+the DOE or NSF.
